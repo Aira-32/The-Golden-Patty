@@ -1,0 +1,25 @@
+{
+  "name": "the-golden-patty",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aira-32/The-Golden-Patty.git"
+  },
+  "keywords": [],
+  "author": "Aira",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Aira-32/The-Golden-Patty/issues"
+  },
+  "homepage": "https://github.com/Aira-32/The-Golden-Patty#readme",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwindcss": "^4.1.11"
+  }
+}

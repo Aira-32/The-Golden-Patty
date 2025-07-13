@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/* Fonts */
+@theme{
+
+    /* 🌟 CORE COLORS */
+--color-primary: "#FFB347";       /* Golden Amber (Main brand color) */
+--color-secondary: "#3D251E";     /* Charcoal Grill (Text, borders) */
+--color-background: "#F5F0E5";    /* Creamy Brioche (Main background) */
+--color-accent: "#D2483D";        /* Tomato Fire (Buttons, alerts) */
+--color-veggie: "#8AA54F";        /* Fresh Lettuce (Veg options, icons) */
+
+/* 🥓 ACCENT COLORS */
+--color-bacon: "#A85C38";         /* Smoky Bacon (Borders, details) */
+--color-cheese: "#FFD166";        /* Cheese Melt (Highlights, hovers) */
+--color-truffle: "#4A4030";       /* Truffle Shimmer (Secondary text) */
+
+/* 🔥 GRADIENTS */
+--gradient-patty: "linear-gradient(135deg, #FFB347 0%, #D2483D 100%)";
+--gradient-gold: "linear-gradient(135deg, #FFB347 0%, #FFD166 100%)";
+--gradient-menu: "linear-gradient(to bottom, #F5F0E5 0%, #FFD16688 100%)";
+
+}
