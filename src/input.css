@@ -1,23 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Gravitas+One&family=Luckiest+Guy&family=M+PLUS+Rounded+1c&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Paytone+One&family=Quicksand:wght@300..700&family=Russo+One&display=swap');
 @import "tailwindcss";
 
-/* Fonts */
-@theme{
+
+@theme {
+
+    /* Title Fonts */
+    --font-primary: "Bungee", sans-serif;
+    --font-secondary: "Gravitas One", sans-serif;
+    --font-tertiary: "Luckiest Guy", sans-serif;
+    --font-quaternary: "Paytone One", sans-serif;
+    --font-quinary: "Russo One", sans-serif;
+
+    /* Paragraph Fonts */
+    --font-sextary: "M PLUS Rounded 1c", sans-serif;
+    --font-septenary: "Comic Neue", sans-serif;
+    --font-octonary: "Quicksand", sans-serif;
+    --font-nonary: "Nunito", sans-serif;
+    
 
     /* 🌟 CORE COLORS */
---color-primary: "#FFB347";       /* Golden Amber (Main brand color) */
---color-secondary: "#3D251E";     /* Charcoal Grill (Text, borders) */
---color-background: "#F5F0E5";    /* Creamy Brioche (Main background) */
---color-accent: "#D2483D";        /* Tomato Fire (Buttons, alerts) */
---color-veggie: "#8AA54F";        /* Fresh Lettuce (Veg options, icons) */
+    --color-primary: #FFB347;       /* Golden Amber (Main brand color) */
+    --color-secondary: #3D251E;     /* Charcoal Grill (Text, borders) */
+    --color-background: #F5F0E5;    /* Creamy Brioche (Main background) */
+    --color-accent: #D2483D;        /* Tomato Fire (Buttons, alerts) */
+    --color-veggie: #8AA54F;        /* Fresh Lettuce (Veg options, icons) */
 
-/* 🥓 ACCENT COLORS */
---color-bacon: "#A85C38";         /* Smoky Bacon (Borders, details) */
---color-cheese: "#FFD166";        /* Cheese Melt (Highlights, hovers) */
---color-truffle: "#4A4030";       /* Truffle Shimmer (Secondary text) */
+    /* 🥓 ACCENT COLORS */
+    --color-bun: #93502F;           /* Toasted Bun (Pane dei burger più scuro) */
+    --color-bacon: #C45E38;         /* Crispy Bacon (Bacon reale) */
+    --color-tomato: #C12026;       /* Ketchup (Accenti rossi) */
+    --color-cheese: #FFD166;        /* Cheese Melt (Highlights, hovers) */
+    --color-truffle: #4A4030;       /* Truffle Shimmer (Secondary text) */
+}
 
-/* 🔥 GRADIENTS */
---gradient-patty: "linear-gradient(135deg, #FFB347 0%, #D2483D 100%)";
---gradient-gold: "linear-gradient(135deg, #FFB347 0%, #FFD166 100%)";
---gradient-menu: "linear-gradient(to bottom, #F5F0E5 0%, #FFD16688 100%)";
 
+@layer base{
+
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    @keyframes bounce-x {
+        0%, 100% {
+            transform: translateX(-5%);
+            animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+        }
+        50% {
+            transform: translateX(0);
+            animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+        }
+    }
+    
+    .animate-bounce-x {
+        animation: bounce-x 1s infinite;
+    }
 }
