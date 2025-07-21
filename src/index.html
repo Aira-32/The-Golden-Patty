@@ -11,20 +11,20 @@
     
     <header class="p-4 px-8 w-screen fixed z-20 backdrop-brightness-50 backdrop-blur-lg bg-transparent text-cheese font-quinary">
         <div class="w-full flex justify-between items-center">
-            <div class="flex items-center gap-2 text-2xl">
+            <a href="index.html" class="flex items-center gap-2 text-2xl">
                 <i class="fa-solid fa-burger"></i>
                 <h3 class="font-primary text-[15px] md:text-2xl">The Golden Patty</h1>
-            </div>
+            </a>
     
             <ul class="hidden lg:flex gap-6 text-lg">
                 <li>
-                    <a href="#" class="hover:text-accent transition-colors duration-300 ease-in-out">About</a>
+                    <a href="about.html" class="hover:text-accent transition-colors duration-300 ease-in-out">About</a>
                 </li>
                 <li>
-                    <a href="#" class="hover:text-accent transition-colors duration-300 ease-in-out">Contact</a>
+                    <a href="contact.html" class="hover:text-accent transition-colors duration-300 ease-in-out">Contact</a>
                 </li>
                 <li>
-                    <a href="#" class="hover:text-accent transition-colors duration-300 ease-in-out">Gallery</a>
+                    <a href="gallery.html" class="hover:text-accent transition-colors duration-300 ease-in-out">Gallery</a>
                 </li>
                 <li>
                     <a href="#" class="hover:text-accent transition-colors duration-300 ease-in-out">Menu</a>
@@ -41,16 +41,16 @@
     <aside class="hidden fixed top-0 left-0 w-full h-full">
         <ul>
             <li>
+                <a href="about.html">About</a>
+            </li>
+            <li>
+                <a href="contact.html">Contact</a>
+            </li>
+            <li>
+                <a href="gallery.html">Gallery</a>
+            </li>
+            <li>
                 <a href="#">Menu</a>
-            </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#">Gallery</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
             </li>
         </ul>
     </aside>
@@ -445,27 +445,27 @@
         </section>
     </main>
 
-    <footer class="bg-bun text-background py-12 px-4">
+    <footer class="bg-bun text-background/80 py-12 px-4">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Contact Info -->
                 <div class="space-y-4">
-                    <h3 class="text-2xl font-quaternary text-cheese mb-4">CONTACT US</h3>
+                    <h3 class="text-2xl font-quaternary text-secondary mb-4">CONTACT US</h3>
                     <div class="flex items-center gap-3">
-                        <i class="fas fa-map-marker-alt text-cheese"></i>
-                        <a href="https://maps.app.goo.gl/example" target="_blank" class="hover:underline underline-offset-2 hover:text-cheese transition-colors">
+                        <i class="fas fa-map-marker-alt text-secondary"></i>
+                        <a href="https://maps.app.goo.gl/example" target="_blank" class="hover:underline underline-offset-2 hover:text-secondary transition-colors">
                             123 Flavor Street<br>Rome, 00100
                         </a>
                     </div>
                     <div class="flex items-center gap-3">
-                        <i class="fas fa-phone text-cheese"></i>
-                        <a href="tel:+39061234567" class="hover:underline underline-offset-2 hover:text-cheese transition-colors">
+                        <i class="fas fa-phone text-secondary"></i>
+                        <a href="tel:+39061234567" class="hover:underline underline-offset-2 hover:text-secondary transition-colors">
                             +39 06 123 4567
                         </a>
                     </div>
                     <div class="flex items-center gap-3">
-                        <i class="fas fa-envelope text-cheese"></i>
-                        <a href="mailto:info@goldenpatty.com" class="hover:underline underline-offset-2 hover:text-cheese transition-colors">
+                        <i class="fas fa-envelope text-secondary"></i>
+                        <a href="mailto:info@goldenpatty.com" class="hover:underline underline-offset-2 hover:text-secondary transition-colors">
                             info@goldenpatty.com
                         </a>
                     </div>
@@ -473,24 +473,24 @@
                 
                 <!-- Opening Hours -->
                 <div>
-                    <h3 class="text-2xl font-quaternary text-cheese mb-4">OPENING HOURS</h3>
+                    <h3 class="text-2xl font-quaternary text-secondary mb-4">OPENING HOURS</h3>
                     <div class="space-y-2">
                         <p class="flex justify-between"><span>Mon - Fri:</span> 12:00 PM - 3:30 PM / 7:00 PM - 12:00 AM</p>
                         <p class="flex justify-between"><span>Sat - Sun:</span> 12:00 PM - 12:00 AM</p>
                     </div>
                     <div class="mt-6">
-                        <h4 class="font-quinary text-cheese text-lg mb-2">FOLLOW US</h4>
+                        <h4 class="font-quinary text-secondary text-lg mb-2">FOLLOW US</h4>
                         <div class="flex gap-4 text-xl">
-                            <a href="#" class="hover:text-cheese transition-colors"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="hover:text-cheese transition-colors"><i class="fab fa-facebook"></i></a>
-                            <a href="#" class="hover:text-cheese transition-colors"><i class="fab fa-tripadvisor"></i></a>
+                            <a href="#" class="hover:text-secondary transition-colors"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="hover:text-secondary transition-colors"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="hover:text-secondary transition-colors"><i class="fab fa-tripadvisor"></i></a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Map -->
                 <div>
-                    <h3 class="text-2xl font-quaternary text-cheese mb-4">FIND US</h3>
+                    <h3 class="text-2xl font-quaternary text-secondary mb-4">FIND US</h3>
                     <div class="aspect-w-16 aspect-h-9 bg-gray-700 rounded-lg overflow-hidden">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11880.45548822712!2d12.4922309!3d41.8902102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f61b6532013ad%3A0x28f1c82e908526c4!2sColosseo!5e0!3m2!1sit!2sit!4v1620000000000!5m2!1sit!2sit" 
