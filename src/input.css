@@ -26,9 +26,12 @@
     --color-veggie: #8AA54F;        /* Fresh Lettuce (Veg options, icons) */
 
     /* 🥓 ACCENT COLORS */
-    --color-bun: #93502F;           /* Toasted Bun (Pane dei burger più scuro) */
+    --color-bun: #B58048;           /* Colore del pane dell'hot dog */
+    --color-wurstel: #8B4513;       /* Colore del wurstel */
+    --color-ketchup: #CC0000;       /* Rosso ketchup */
+    --color-mustard: #FFD700;       /* Giallo senape */
     --color-bacon: #C45E38;         /* Crispy Bacon (Bacon reale) */
-    --color-tomato: #C12026;       /* Ketchup (Accenti rossi) */
+    --color-tomato: #C12026;        /* Ketchup (Accenti rossi) */
     --color-cheese: #FFD166;        /* Cheese Melt (Highlights, hovers) */
     --color-truffle: #4A4030;       /* Truffle Shimmer (Secondary text) */
 }

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="output.css">
+    <style>
+        body {
+            background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/soda.png');
+            background-attachment: fixed;
+            background-color: #1a1a1a;
+        }
+    </style>
+    <title>The Golden Patty - Gallery</title>
+</head>
+<body class="bg-background text-secondary">
+    
+    <header class="p-4 px-8 w-screen fixed z-20 backdrop-brightness-50 backdrop-blur-lg bg-transparent text-cheese font-quinary">
+        <div class="w-full flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 text-2xl">
+                <i class="fa-solid fa-burger"></i>
+                <h1 class="font-primary text-[15px] md:text-2xl">The Golden Patty</h1>
+            </a>
+    
+            <ul class="hidden lg:flex gap-6 text-lg">
+                <li>
+                    <a href="about.html" class="hover:text-accent transition-colors duration-300 ease-in-out">About</a>
+                </li>
+                <li>
+                    <a href="contact.html" class="hover:text-accent transition-colors duration-300 ease-in-out">Contact</a>
+                </li>
+                <li>
+                    <a href="gallery.html" class="hover:text-accent transition-colors duration-300 ease-in-out">Gallery</a>
+                </li>
+                <li>
+                    <a href="#" class="hover:text-accent transition-colors duration-300 ease-in-out">Menu</a>
+                </li>
+            </ul>
+            
+            <div class="lg:hidden">
+                <i role="button" aria-label="Open sidebar" class="fa-solid fa-bars text-2xl cursor-pointer"></i>
+            </div>
+            
+        </div>
+    </header>
+    
+    <aside class="hidden fixed top-0 left-0 w-full h-full">
+        <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="#">Menu</a></li>
+        </ul>
+    </aside>
+
+    <main>
+        <section class="relative h-[80vh] flex items-center justify-center text-center">
+            <div class="absolute inset-0 bg-black/60 z-0"></div>
+            <img src="static/images/welcome_section_img.jpeg" class="absolute inset-0 w-full h-full object-cover -z-10" alt="Delicious food selection">
+            <div class="relative z-10 p-4 text-center">
+                <h2 class="font-primary text-4xl md:text-6xl text-cheese mb-6 drop-shadow-lg">CULINARY DELIGHTS</h2>
+                <p class="font-octonary text-lg md:text-xl text-background max-w-2xl mx-auto leading-relaxed">Experience the perfect blend of flavors in every bite. Our passion for quality ingredients shines through in every dish we serve.</p>
+            </div>
+        </section>
+
+        <section class="bg-background py-20">
+            <div class="container mx-auto px-4">
+                <div class="columns-1 sm:columns-2 lg:columns-3 gap-4">
+                    <div class="mb-4 break-inside-avoid overflow-hidden rounded-xl shadow-lg">
+                        <img class="w-full h-auto rounded-xl transform transition-all duration-500 ease-in-out hover:scale-110" src="https://images.pexels.com/photos/1639562/pexels-photo-1639562.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sesame burger with melted cheese">
+                    </div>
+                    <div class="mb-4 break-inside-avoid overflow-hidden rounded-xl shadow-lg">
+                        <img class="w-full h-auto rounded-xl transform transition-all duration-500 ease-in-out hover:scale-110" src="static/images/gallery/pexels-dzeninalukac-1583884.jpg" alt="Hot dog with sauces and sauerkraut">
+                    </div>
+                    <div class="mb-4 break-inside-avoid overflow-hidden rounded-xl shadow-lg">
+                        <img class="w-full h-auto rounded-xl transform transition-all duration-500 ease-in-out hover:scale-110" src="https://images.pexels.com/photos/1893555/pexels-photo-1893555.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Crispy french fries served in a paper cone">
+                    </div>
+                    <div class="mb-4 break-inside-avoid overflow-hidden rounded-xl shadow-lg">
+                        <img class="w-full h-auto rounded-xl transform transition-all duration-500 ease-in-out hover:scale-110" src="https://images.pexels.com/photos/2983098/pexels-photo-2983098.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Double cheeseburger with bacon and sauces">
+                    </div>
+                    <div class="mb-4 break-inside-avoid overflow-hidden rounded-xl shadow-lg">
+                        <img class="w-full h-auto rounded-xl transform transition-all duration-500 ease-in-out hover:scale-110" src="static/images/gallery/pexels-laila-klinsmann-301011-943260.jpg" alt="Chocolate milkshake with whipped cream and straw">
+                    </div>
+                    <div class="mb-4 break-inside-avoid overflow-hidden rounded-xl shadow-lg">
+                        <img class="w-full h-auto rounded-xl transform transition-all duration-500 ease-in-out hover:scale-110" src="static/images/gallery/pexels-marilena-baltzaki-346260-15082377.jpg" alt="Golden chicken nuggets with sweet and sour sauce">
+                    </div>
+                    <div class="mb-4 break-inside-avoid overflow-hidden rounded-xl shadow-lg">
+                        <img class="w-full h-auto rounded-xl transform transition-all duration-500 ease-in-out hover:scale-110" src="https://images.pexels.com/photos/1251198/pexels-photo-1251198.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Delicious chocolate dessert with ice cream">
+                    </div>
+                    <div class="mb-4 break-inside-avoid overflow-hidden rounded-xl shadow-lg">
+                        <img class="w-full h-auto rounded-xl transform transition-all duration-500 ease-in-out hover:scale-110" src="static/images/gallery/pexels-yelenaodintsova-10289300.jpg" alt="Delicious chocolate dessert with ice cream">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-background">
+            <div class="container mx-auto px-4 text-center">
+                <h3 class="font-quaternary text-3xl md:text-4xl text-secondary mb-6">Ready to Taste the Difference?</h3>
+                <p class="font-octonary text-lg text-truffle max-w-2xl mx-auto mb-10 leading-relaxed">
+                    Experience our delicious selection of burgers and sides. Perfectly crafted for your enjoyment.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-6">
+                    <a href="#" class="px-8 py-3.5 bg-accent text-white font-octonary font-semibold rounded-lg hover:bg-[#b83a31] transition-all duration-300">
+                        Order Now
+                    </a>
+                    <a href="#" class="px-8 py-3.5 bg-background text-secondary font-octonary font-semibold rounded-lg border-2 border-secondary hover:bg-secondary hover:text-background transition-all duration-300">
+                        View Full Menu
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-bun text-background/80 py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Contact Info -->
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-quaternary text-secondary mb-4">CONTACT US</h3>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-map-marker-alt text-secondary"></i>
+                        <a href="https://maps.app.goo.gl/example" target="_blank" class="hover:underline underline-offset-2 hover:text-secondary transition-colors">
+                            123 Flavor Street<br>Rome, 00100
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-phone text-secondary"></i>
+                        <a href="tel:+39061234567" class="hover:underline underline-offset-2 hover:text-secondary transition-colors">
+                            +39 06 123 4567
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-envelope text-secondary"></i>
+                        <a href="mailto:info@goldenpatty.com" class="hover:underline underline-offset-2 hover:text-secondary transition-colors">
+                            info@goldenpatty.com
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Opening Hours -->
+                <div>
+                    <h3 class="text-2xl font-quaternary text-secondary mb-4">OPENING HOURS</h3>
+                    <div class="space-y-2">
+                        <p class="flex justify-between"><span>Mon - Fri:</span> 12:00 PM - 3:30 PM / 7:00 PM - 12:00 AM</p>
+                        <p class="flex justify-between"><span>Sat - Sun:</span> 12:00 PM - 12:00 AM</p>
+                    </div>
+                    <div class="mt-6">
+                        <h4 class="font-quinary text-secondary text-lg mb-2">FOLLOW US</h4>
+                        <div class="flex gap-4 text-xl">
+                            <a href="#" class="hover:text-secondary transition-colors"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="hover:text-secondary transition-colors"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="hover:text-secondary transition-colors"><i class="fab fa-tripadvisor"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Map -->
+                <div>
+                    <h3 class="text-2xl font-quaternary text-secondary mb-4">FIND US</h3>
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-700 rounded-lg overflow-hidden">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11880.45548822712!2d12.4922309!3d41.8902102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f61b6532013ad%3A0x28f1c82e908526c4!2sColosseo!5e0!3m2!1sit!2sit!4v1620000000000!5m2!1sit!2sit" 
+                            width="100%" 
+                            height="200" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            class="w-full h-full">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-background/20 mt-12 pt-6 text-center">
+                <p class="text-sm">&copy; 2025 The Golden Patty. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
