@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Golden Patty - Gourmet burger restaurant offering premium ingredients and unique flavors. Experience the best burgers in town with our handcrafted recipes.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="output.css">
     <title>The Golden Patty - Homepage</title>
 </head>
 <body class="bg-background text-secondary">
     
-    <header class="p-4 px-8 w-screen fixed z-20 backdrop-brightness-50 backdrop-blur-lg bg-transparent text-cheese font-quinary">
+    <header class="p-4 px-8 w-screen fixed z-30 backdrop-brightness-50 backdrop-blur-lg bg-transparent text-cheese font-quinary">
         <div class="w-full flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-2 text-2xl">
                 <i class="fa-solid fa-burger"></i>
@@ -27,11 +28,11 @@
                     <a href="gallery.html" class="hover:text-accent transition-colors duration-300 ease-in-out">Gallery</a>
                 </li>
                 <li>
-                    <a href="#" class="hover:text-accent transition-colors duration-300 ease-in-out">Menu</a>
+                    <a href="menu.html" class="hover:text-accent transition-colors duration-300 ease-in-out">Menu</a>
                 </li>
             </ul>
             
-            <div class="lg:hidden">
+            <div class="lg:hidden open-sidebar">
                 <i role="button" aria-label="Open sidebar" class="fa-solid fa-bars text-2xl cursor-pointer"></i>
             </div>
             
@@ -59,7 +60,7 @@
         
         <section>
             <div class="relative">
-                <video class="w-screen h-screen object-cover object-left md:object-[0px]" src="static/video/hero-section-video.mp4" autoplay loop muted></video>
+                <video class="w-screen h-screen object-cover object-left md:object-[0px]" src="static/video/hero-section-video.mp4" autoplay loop muted fetchpriority="high"></video>
                 <div class="absolute top-0 left-0 w-full h-full bg-black/60"></div>
             </div>
 
@@ -77,7 +78,7 @@
 
             <div class="flex flex-col justify-center items-center font-quinary mb-10">
 
-                <h3 class="text-4xl text-background">PROMOS</h3>
+                <h2 class="text-4xl text-background">PROMOS</h2>
                 <hr class="border-background w-1/9 border-2">
 
             </div>
@@ -87,9 +88,16 @@
                 <div class="flex overflow-x-auto snap-mandatory snap-x scrollbar-hide gap-20 self-center justify-self-center w-5/6">
                     <!-- Prima card -->
                     <div class="relative flex-none w-full snap-center group">
-                        <img src="static/images/promo/first_img_promo.jpeg" 
-                            alt="Classic cheeseburger" 
-                            class="w-full h-[80vh] lg:h-[90vh] object-cover rounded-lg brightness-50">
+                        <picture>
+                            <source srcset="static/images/promo/first_img_promo.webp" type="image/webp">
+                            <source srcset="static/images/promo/first_img_promo.jpeg" type="image/jpeg">
+                            <img src="static/images/promo/first_img_promo.jpeg" 
+                                alt="Classic cheeseburger with melted cheese and fresh vegetables" 
+                                class="w-full h-[80vh] lg:h-[90vh] object-cover rounded-lg brightness-50"
+                                loading="lazy"
+                                width="800"
+                                height="1200">
+                        </picture>
 
                         <div class="absolute inset-0 flex items-center justify-center p-4">
                             <div class="flex flex-col text-center items-center w-full bg-black/40 backdrop-blur-sm rounded-3xl p-4 sm:p-6 md:p-8 hover:border hover:border-primary transition-all duration-300 ease-in-out max-w-[90%] sm:max-w-[80%] md:max-w-4xl">
@@ -98,13 +106,25 @@
                                     <span class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent rounded-full blur-sm group-hover:opacity-80 transition-opacity"></span>
                                 </div>
                                 <div class="w-fit mt-3 sm:mt-4 md:mt-5">
-                                    <h2 class="text-xl sm:text-2xl md:text-3xl text-primary font-primary">NUGGETS & COLA</h2>
+                                    <h3 class="text-xl sm:text-2xl md:text-3xl text-primary font-primary">NUGGETS & COLA</h3>
                                     <hr class="border-primary border-2 w-1/2 mx-auto my-1 sm:my-2">
                                 </div>
                                 <div class="flex justify-center items-center gap-3 sm:gap-4 mt-4 sm:mt-6 md:mt-8">
-                                    <img src="static/images/icons/nuggets_icon.png" alt="nuggets_icon" class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain">
+                                    <picture>
+                                        <source srcset="static/images/icons/nuggets_icon.webp" type="image/webp">
+                                        <source srcset="static/images/icons/nuggets_icon.png" type="image/png">
+                                        <img src="static/images/icons/nuggets_icon.png" alt="nuggets_icon" 
+                                            class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain"
+                                            width="80" height="80" loading="lazy">
+                                    </picture>
                                     <span class="text-3xl sm:text-4xl text-primary">+</span>
-                                    <img src="static/images/icons/coca_cola_icon.png" alt="coca_cola_icon" class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain">
+                                    <picture>
+                                        <source srcset="static/images/icons/coca_cola_icon.webp" type="image/webp">
+                                        <source srcset="static/images/icons/coca_cola_icon.png" type="image/png">
+                                        <img src="static/images/icons/coca_cola_icon.png" alt="coca cola icon" 
+                                            class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain"
+                                            width="80" height="80" loading="lazy">
+                                    </picture>
                                 </div>
                                 <div class="flex justify-center items-center gap-6 my-6 sm:my-8">
                                     <span class="line-through text-primary/60 text-2xl sm:text-3xl">€6,50</span>
@@ -125,9 +145,16 @@
 
                     <!-- Seconda card -->
                     <div class="relative flex-none w-full snap-center group">
-                        <img src="static/images/promo/second_img_promo.jpeg" 
-                            alt="Double bacon burger" 
-                            class="w-full h-[80vh] lg:h-[90vh] object-cover rounded-lg brightness-50">
+                        <picture>
+                            <source srcset="static/images/promo/second_img_promo.webp" type="image/webp">
+                            <source srcset="static/images/promo/second_img_promo.jpeg" type="image/jpeg">
+                            <img src="static/images/promo/second_img_promo.jpeg" 
+                                alt="Double bacon burger" 
+                                class="w-full h-[80vh] lg:h-[90vh] object-cover rounded-lg brightness-50"
+                                loading="lazy"
+                                width="800"
+                                height="1200">
+                        </picture>
                             
                         <div class="absolute inset-0 flex items-center justify-center p-4">
                             <div class="flex flex-col text-center items-center w-full bg-black/40 backdrop-blur-sm rounded-3xl p-4 sm:p-6 md:p-8 hover:border hover:border-primary transition-all duration-300 ease-in-out max-w-[90%] sm:max-w-[80%] md:max-w-4xl">
@@ -136,13 +163,25 @@
                                     <span class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent rounded-full blur-sm group-hover:opacity-80 transition-opacity"></span>
                                 </div>
                                 <div class="w-fit mt-3 sm:mt-4 md:mt-5">
-                                    <h2 class="text-xl sm:text-2xl md:text-3xl text-primary font-primary">BACON DELUXE</h2>
+                                    <h3 class="text-xl sm:text-2xl md:text-3xl text-primary font-primary">BACON DELUXE</h3>
                                     <hr class="border-primary border-2 w-1/2 mx-auto my-1 sm:my-2">
                                 </div>
                                 <div class="flex justify-center items-center gap-3 sm:gap-4 mt-4 sm:mt-6 md:mt-8">
-                                    <img src="static/images/icons/burger_icon.png" alt="burger_icon" class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain">
+                                    <picture>
+                                        <source srcset="static/images/icons/burger_icon.webp" type="image/webp">
+                                        <source srcset="static/images/icons/burger_icon.png" type="image/png">
+                                        <img src="static/images/icons/burger_icon.png" alt="burger icon" 
+                                            class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain"
+                                            width="80" height="80" loading="lazy">
+                                    </picture>
                                     <span class="text-3xl sm:text-4xl text-primary">+</span>
-                                    <img src="static/images/icons/fries_icon.png" alt="fries_icon" class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain">
+                                    <picture>
+                                        <source srcset="static/images/icons/fries_icon.webp" type="image/webp">
+                                        <source srcset="static/images/icons/fries_icon.png" type="image/png">
+                                        <img src="static/images/icons/fries_icon.png" alt="fries icon" 
+                                            class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain"
+                                            width="80" height="80" loading="lazy">
+                                    </picture>
                                 </div>
                                 <div class="flex justify-center items-center gap-6 my-6 sm:my-8">
                                     <span class="line-through text-primary/60 text-2xl sm:text-3xl">€9,90</span>
@@ -163,9 +202,16 @@
 
                     <!-- Terza card -->
                     <div class="relative flex-none w-full snap-center group">
-                        <img src="static/images/promo/third_img_promo.jpeg" 
-                            alt="Hot dog with fries" 
-                            class="w-full h-[80vh] lg:h-[90vh] object-cover rounded-lg brightness-50">
+                        <picture>
+                            <source srcset="static/images/promo/third_img_promo.webp" type="image/webp">
+                            <source srcset="static/images/promo/third_img_promo.jpeg" type="image/jpeg">
+                            <img src="static/images/promo/third_img_promo.jpeg" 
+                                alt="Hot dog with fries" 
+                                class="w-full h-[80vh] lg:h-[90vh] object-cover rounded-lg brightness-50"
+                                loading="lazy"
+                                width="800"
+                                height="1200">
+                        </picture>
 
                         <div class="absolute inset-0 flex items-center justify-center p-4">
                             <div class="flex flex-col text-center items-center w-full bg-black/40 backdrop-blur-sm rounded-3xl p-4 sm:p-6 md:p-8 hover:border hover:border-primary transition-all duration-300 ease-in-out max-w-[90%] sm:max-w-[80%] md:max-w-4xl">
@@ -174,13 +220,25 @@
                                     <span class="absolute inset-0 bg-gradient-to-r from-primary/60 to-transparent rounded-full blur-sm group-hover:opacity-80 transition-opacity"></span>
                                 </div>
                                 <div class="w-fit mt-3 sm:mt-4 md:mt-5">
-                                    <h2 class="text-xl sm:text-2xl md:text-3xl text-primary font-primary">HOT DOG MENU</h2>
+                                    <h3 class="text-xl sm:text-2xl md:text-3xl text-primary font-primary">HOT DOG MENU</h3>
                                     <hr class="border-primary border-2 w-1/2 mx-auto my-1 sm:my-2">
                                 </div>
                                 <div class="flex justify-center items-center gap-3 sm:gap-4 mt-4 sm:mt-6 md:mt-8">
-                                    <img src="static/images/icons/hotdog_icon.png" alt="hotdog_icon" class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain">
+                                    <picture>
+                                        <source srcset="static/images/icons/hotdog_icon.webp" type="image/webp">
+                                        <source srcset="static/images/icons/hotdog_icon.png" type="image/png">
+                                        <img src="static/images/icons/hotdog_icon.png" alt="hotdog icon" 
+                                            class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain"
+                                            width="80" height="80" loading="lazy">
+                                    </picture>
                                     <span class="text-3xl sm:text-4xl text-primary">+</span>
-                                    <img src="static/images/icons/fries_icon.png" alt="fries_icon" class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain">
+                                    <picture>
+                                        <source srcset="static/images/icons/fries_icon.webp" type="image/webp">
+                                        <source srcset="static/images/icons/fries_icon.png" type="image/png">
+                                        <img src="static/images/icons/fries_icon.png" alt="fries icon" 
+                                            class="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 object-contain"
+                                            width="80" height="80" loading="lazy">
+                                    </picture>
                                 </div>
                                 <div class="flex justify-center items-center gap-6 my-6 sm:my-8">
                                     <span class="line-through text-primary/60 text-2xl sm:text-3xl">€7,90</span>
@@ -205,74 +263,80 @@
 
         </section>
 
-        <section class="py-12 md:py-16 lg:py-20 relative overflow-hidden bg-veggie text-tomato">
+        <section class="py-12 md:py-16 lg:py-20 relative overflow-hidden bg-veggie text-[#6c0004]">
             <div class="container mx-auto px-4 relative z-10">
                 <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
                     <div class="w-full lg:w-1/2 space-y-6 lg:space-y-8">
-                        <div class="text-center lg:text-left">
-                            <h2 class="text-3xl sm:text-4xl md:text-5xl font-quaternary mb-1 sm:mb-0">WELCOME TO</h2>
+                        <div class="text-left pl-4">
+                            <h2 class="text-3xl sm:text-4xl md:text-5xl font-quaternary">WELCOME TO</h2>
                             <h2 class="text-4xl sm:text-5xl md:text-6xl font-bold font-quaternary mb-4 md:mb-5">THE GOLDEN PATTY</h2>
-                            <hr class="w-32 md:w-40 h-1 bg-tomato border-0 mx-auto lg:mx-0">
+                            <hr class="w-32 md:w-52 h-1 bg-[#6c0004] border-0 lg:mx-0">
                         </div>
                         
-                        <p class="text-secondary text-base sm:text-lg leading-relaxed font-sextary text-center lg:text-left max-w-2xl mx-auto lg:mx-0">
+                        <p class="text-secondary font-bold sm:text-lg pl-4 md:pl-0 leading-relaxed font-sextary text-left max-w-2xl mx-4">
                             Since 2015, the go-to spot for burger lovers in Rome. Our passion for quality ingredients and pursuit of perfection have made us an institution in the capital's culinary scene.
                         </p>
                         
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6 md:mt-8">
                             <div class="flex items-start gap-4">
-                                <div class="text-accent text-2xl">
+                                <div class="text-[#6c0004] text-2xl">
                                     <i class="fas fa-star"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-xl font-primary">Fresh Ingredients</h4>
-                                    <p class="text-secondary font-sextary">Only local and seasonal products</p>
+                                    <h3 class="text-xl font-primary">Fresh Ingredients</h3>
+                                    <p class="text-secondary font-bold font-sextary">Only local and seasonal products</p>
                                 </div>
                             </div>
                             
                             <div class="flex items-start gap-4">
-                                <div class="text-accent text-2xl">
+                                <div class="text-[#6c0004] text-2xl">
                                     <i class="fas fa-utensils"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-xl font-primary">Open Kitchen</h4>
-                                    <p class="text-secondary font-sextary">Transparent and genuine preparations</p>
+                                    <h3 class="text-xl font-primary">Open Kitchen</h3>
+                                    <p class="text-secondary font-bold font-sextary">Transparent and genuine preparations</p>
                                 </div>
                             </div>
                             
                             <div class="flex items-start gap-4">
-                                <div class="text-accent text-2xl">
+                                <div class="text-[#6c0004] text-2xl">
                                     <i class="fas fa-leaf"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-xl font-primary">Veg Options</h4>
-                                    <p class="text-secondary font-sextary">A dedicated menu</p>
+                                    <h3 class="text-xl font-primary">Veg Options</h3>
+                                    <p class="text-secondary font-bold font-sextary">A dedicated menu</p>
                                 </div>
                             </div>
                             
                             <div class="flex items-start gap-4">
-                                <div class="text-accent text-2xl">
+                                <div class="text-[#6c0004] text-2xl">
                                     <i class="fas fa-cocktail"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-xl font-primary">Craft Cocktails</h4>
-                                    <p class="text-secondary font-sextary">To pair with your dishes</p>
+                                    <h3 class="text-xl font-primary">Craft Cocktails</h3>
+                                    <p class="text-secondary font-bold font-sextary">To pair with your dishes</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Immagine a destra con sovrapposizione -->
-                    <div class="w-full lg:w-1/2 relative mt-10 lg:mt-0">
+                    <div class="w-full lg:w-1/2 relative mt-10 lg:mt-0 px-6">
                         <div class="relative z-10 rounded-2xl overflow-hidden shadow-2xl transform rotate-1 hover:rotate-0 transition-all duration-500 hover:shadow-2xl hover:shadow-black/20">
-                            <img src="static/images/welcome_section_img.jpeg" 
-                                 alt="Interno del ristorante The Golden Patty" 
-                                 class="w-full h-[400px] md:h-[500px] lg:h-[550px] object-cover">
+                            <picture>
+                                <source srcset="static/images/welcome_section_img.webp" type="image/webp">
+                                <source srcset="static/images/welcome_section_img.jpeg" type="image/jpeg">
+                                <img src="static/images/welcome_section_img.jpeg" 
+                                     alt="The Golden Patty restaurant interior" 
+                                     class="w-full h-[400px] md:h-[500px] lg:h-[550px] object-cover"
+                                     loading="lazy"
+                                     >
+                            </picture>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"></div>
                         </div>
                         
                         <!-- Etichetta con orari -->
-                        <div class="absolute -bottom-4 lg:-bottom-6 -left-4 lg:-left-6 bg-primary text-black p-3 lg:p-4 rounded-lg shadow-lg z-20 w-56 lg:w-64">
+                        <div class="absolute -bottom-4 lg:-bottom-6 -left-0 lg:-left-6 bg-primary text-black p-3 lg:p-4 rounded-lg shadow-lg z-20 w-56 lg:w-64">
                             <h4 class="font-primary text-base lg:text-lg mb-1 lg:mb-2 text-secondary">OPENING HOURS</h4>
                             <p class="text-xs lg:text-sm font-semibold font-sextary text-secondary/90">
                                 <span class="block">Mon-Fri: 12:00 PM - 3:30 PM</span>
@@ -288,13 +352,19 @@
         <section class="py-20 bg-cheese text-secondary">
             <div class="container mx-auto px-4">
                 <h2 class="text-4xl text-center font-quaternary mb-12">OUR HOLY GRAIL</h2>
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto px-4">
                     <!-- Classic Patty -->
-                    <div class="group relative overflow-hidden bg-black/80 rounded-2xl shadow-2xl hover:shadow-veggie/20 transition-all duration-500 hover:-translate-y-2">
+                    <div class="group relative overflow-hidden bg-black/80 rounded-2xl shadow-2xl hover:shadow-veggie/20 transition-all duration-500 hover:-translate-y-2 flex flex-col h-full">
                         <div class="relative overflow-hidden aspect-[3/4] rounded-t-2xl">
-                            <img src="static/images/burger_section/burger_section_first_img.jpeg" 
-                                 alt="Classic Patty" 
-                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <picture>
+                                <source srcset="static/images/burger_section/burger_section_first_img.webp" type="image/webp">
+                                <source srcset="static/images/burger_section/burger_section_first_img.jpeg" type="image/jpeg">
+                                <img src="static/images/burger_section/burger_section_first_img.jpeg" 
+                                     alt="Classic Patty burger with fresh ingredients" 
+                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                     loading="lazy"
+                                     >
+                            </picture>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                             <span class="absolute top-4 right-4 bg-veggie/90 text-black font-bold px-3 py-1 rounded-full text-sm">BESTSELLER</span>
                         </div>
@@ -310,36 +380,48 @@
                     <!-- Double Patty -->
                     <div class="group relative overflow-hidden bg-black/80 rounded-2xl shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-2">
                         <div class="relative overflow-hidden aspect-[3/4] rounded-t-2xl">
-                            <img src="static/images/burger_section/burger_section_second_img.jpeg" 
-                                 alt="Double Patty" 
-                                 class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110">
+                            <picture>
+                                <source srcset="static/images/burger_section/burger_section_second_img.webp" type="image/webp">
+                                <source srcset="static/images/burger_section/burger_section_second_img.jpeg" type="image/jpeg">
+                                <img src="static/images/burger_section/burger_section_second_img.jpeg" 
+                                     alt="Double Patty burger with bacon and cheese" 
+                                     class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
+                                     loading="lazy"
+                                     >
+                            </picture>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                             <span class="absolute top-4 right-4 bg-red-500/90 text-white font-bold px-3 py-1 rounded-full text-sm">SPICY</span>
                         </div>
-                        <div class="p-6">
+                        <div class="p-6 pb-4 flex-1 flex flex-col">
                             <div class="flex justify-between items-start mb-2">
                                 <h3 class="text-2xl font-quinary text-primary">DOUBLE TROUBLE</h3>
                                 <span class="text-xl font-bold text-primary">€11.90</span>
                             </div>
-                            <p class="text-gray-300">Double beef patties, crispy bacon, melted cheddar, and our special sauce</p>
+                            <p class="text-gray-300 mt-2">Double beef patties, crispy bacon, melted cheddar, and our special sauce</p>
                         </div>
                     </div>
 
                     <!-- Signature Patty -->
                     <div class="group relative overflow-hidden bg-black/80 rounded-2xl shadow-2xl hover:shadow-primary/20 transition-all duration-500 hover:-translate-y-2">
                         <div class="relative overflow-hidden aspect-[3/4] rounded-t-2xl">
-                            <img src="static/images/burger_section/burger_section_third_img.jpeg" 
-                                 alt="Signature Patty" 
-                                 class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110">
+                            <picture>
+                                <source srcset="static/images/burger_section/burger_section_third_img.webp" type="image/webp">
+                                <source srcset="static/images/burger_section/burger_section_third_img.jpeg" type="image/jpeg">
+                                <img src="static/images/burger_section/burger_section_third_img.jpeg" 
+                                     alt="Signature Patty with special sauce" 
+                                     class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
+                                     loading="lazy"
+                                     >
+                            </picture>
                             <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                             <span class="absolute top-4 right-4 bg-yellow-400/90 text-black font-bold px-3 py-1 rounded-full text-sm">CHEF'S CHOICE</span>
                         </div>
-                        <div class="p-6">
+                        <div class="p-6 pb-4 flex-1 flex flex-col">
                             <div class="flex justify-between items-start mb-2">
                                 <h3 class="text-2xl font-quinary text-primary">GOLDEN SIGNATURE</h3>
                                 <span class="text-xl font-bold text-primary">€13.90</span>
                             </div>
-                            <p class="text-gray-300">Premium beef patty, truffle aioli, gold leaf garnish, brioche bun</p>
+                            <p class="text-gray-300 mt-2">Premium beef patty, truffle aioli, gold leaf garnish, brioche bun</p>
                         </div>
                     </div>
                 </div>
@@ -351,11 +433,11 @@
 
         <!-- Testimonials Section -->
         <section class="py-20 bg-secondary text-primary">
-            <div class="container mx-auto px-4">
+            <div class="container mx-auto px-6">
                 <h2 class="text-4xl text-center font-quaternary text-primary mb-6">REAL PEOPLE,<br><span class="text-5xl font-bold">REAL LOVE</span></h2>
                 <p class="text-center text-primary/90 max-w-2xl mx-auto mb-12 text-lg">Don't just take our word for it. Here's what our community is saying about their Golden Patty experience.</p>
                 
-                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl justify-self-center">
                     <!-- Review 1 -->
                     <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1">
                         <div class="flex items-center mb-6">
@@ -445,68 +527,85 @@
         </section>
     </main>
 
-    <footer class="bg-bun text-background/80 py-12 px-4">
+    <footer class="bg-bun text-black font-semibold py-12 px-4">
         <div class="container mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Contact Info -->
                 <div class="space-y-4">
-                    <h3 class="text-2xl font-quaternary text-secondary mb-4">CONTACT US</h3>
+                    <h3 class="text-2xl font-primary font-extralight mb-4">CONTACT US</h3>
                     <div class="flex items-center gap-3">
-                        <i class="fas fa-map-marker-alt text-secondary"></i>
-                        <a href="https://maps.app.goo.gl/example" target="_blank" class="hover:underline underline-offset-2 hover:text-secondary transition-colors">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="https://maps.app.goo.gl/example" target="_blank" rel="noopener noreferrer" class="hover:underline underline-offset-2 transition-colors">
                             123 Flavor Street<br>Rome, 00100
                         </a>
                     </div>
                     <div class="flex items-center gap-3">
-                        <i class="fas fa-phone text-secondary"></i>
-                        <a href="tel:+39061234567" class="hover:underline underline-offset-2 hover:text-secondary transition-colors">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+39061234567" class="hover:underline underline-offset-2 transition-colors">
                             +39 06 123 4567
                         </a>
                     </div>
                     <div class="flex items-center gap-3">
-                        <i class="fas fa-envelope text-secondary"></i>
-                        <a href="mailto:info@goldenpatty.com" class="hover:underline underline-offset-2 hover:text-secondary transition-colors">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@goldenpatty.com" class="hover:underline underline-offset-2 transition-colors">
                             info@goldenpatty.com
                         </a>
                     </div>
                 </div>
                 
-                <!-- Opening Hours -->
-                <div>
-                    <h3 class="text-2xl font-quaternary text-secondary mb-4">OPENING HOURS</h3>
-                    <div class="space-y-2">
-                        <p class="flex justify-between"><span>Mon - Fri:</span> 12:00 PM - 3:30 PM / 7:00 PM - 12:00 AM</p>
-                        <p class="flex justify-between"><span>Sat - Sun:</span> 12:00 PM - 12:00 AM</p>
-                    </div>
-                    <div class="mt-6">
-                        <h4 class="font-quinary text-secondary text-lg mb-2">FOLLOW US</h4>
-                        <div class="flex gap-4 text-xl">
-                            <a href="#" class="hover:text-secondary transition-colors"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="hover:text-secondary transition-colors"><i class="fab fa-facebook"></i></a>
-                            <a href="#" class="hover:text-secondary transition-colors"><i class="fab fa-tripadvisor"></i></a>
+                <!-- Map with Cookie Consent -->
+                <div class="w-full order-2 md:order-3">
+                    <h3 class="text-2xl font-quaternary mb-4">FIND US</h3>
+                    <div id="map-container" class="relative bg-gray-100 rounded-lg overflow-hidden">
+                        <!-- Cookie Consent Banner -->
+                        <div id="map-consent" class="p-4 text-center">
+                            <p class="text-gray-700 mb-3">Per visualizzare la mappa, accetta i cookie di terze parti.</p>
+                            <button 
+                                onclick="loadMap()"
+                                class="bg-primary text-black px-6 py-2 rounded-lg hover:bg-primary-dark transition-colors font-medium"
+                            >
+                                Accetta e mostra mappa
+                            </button>
+                        </div>
+                        
+                        <!-- Map Iframe (initially hidden) -->
+                        <div id="map-iframe" class="hidden h-[300px] w-full">
+                            <!-- Map will be loaded here -->
                         </div>
                     </div>
                 </div>
-                
-                <!-- Map -->
-                <div>
-                    <h3 class="text-2xl font-quaternary text-secondary mb-4">FIND US</h3>
-                    <div class="aspect-w-16 aspect-h-9 bg-gray-700 rounded-lg overflow-hidden">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11880.45548822712!2d12.4922309!3d41.8902102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f61b6532013ad%3A0x28f1c82e908526c4!2sColosseo!5e0!3m2!1sit!2sit!4v1620000000000!5m2!1sit!2sit" 
-                            width="100%" 
-                            height="200" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy"
-                            class="w-full h-full">
-                        </iframe>
+
+                <!-- Opening Hours -->
+                <div class="w-full order-3 md:order-2">
+                    <h3 class="text-2xl font-primary font-extralight mb-4">OPENING HOURS</h3>
+                    <div class="space-y-4">
+                        <div class="bg-white/10 p-4 rounded-lg">
+                            <p class="font-medium text-lg mb-1">Lunedì - Venerdì</p>
+                            <p class="text-gray-800">12:00 - 15:30</p>
+                            <p class="text-gray-800">19:00 - 00:00</p>
+                        </div>
+                        <div class="bg-white/10 p-4 rounded-lg">
+                            <p class="font-medium text-lg mb-1">Sabato - Domenica</p>
+                            <p class="text-gray-800">12:00 - 00:00</p>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="font-quinary text-lg mb-2">FOLLOW US</h4>
+                        <div class="flex gap-4 text-2xl">
+                            <a href="#" class="hover:text-primary transition-colors relative group" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
+                                <span class="sr-only">Visit our Instagram profile</span>
+                            </a>
+                            <a href="#" class="hover:text-primary transition-colors relative group" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-facebook" aria-hidden="true"></i>
+                                <span class="sr-only">Visit our Facebook page</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Copyright -->
-            <div class="border-t border-background/20 mt-12 pt-6 text-center">
+            <div class="border-t border-black/20 mt-12 pt-6 text-center">
                 <p class="text-sm">&copy; 2025 The Golden Patty. All rights reserved.</p>
             </div>
         </div>

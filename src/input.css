@@ -1,3 +1,7 @@
+/* Preload critical font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+/* Load other fonts with swap */
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Gravitas+One&family=Luckiest+Guy&family=M+PLUS+Rounded+1c&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Paytone+One&family=Quicksand:wght@300..700&family=Russo+One&display=swap');
 @import "tailwindcss";
 
@@ -37,7 +41,20 @@
 }
 
 
-@layer base{
+@layer base {
+    /* Screen reader only text */
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
 
     .scrollbar-hide::-webkit-scrollbar {
         display: none;
