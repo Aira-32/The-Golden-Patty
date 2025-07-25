@@ -14,7 +14,7 @@
         <div class="w-full flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-2 text-2xl">
                 <i class="fa-solid fa-burger"></i>
-                <h3 class="font-primary text-[15px] md:text-2xl">The Golden Patty</h1>
+                <h3 class="font-primary text-lg md:text-2xl">The Golden Patty</h1>
             </a>
     
             <ul class="hidden lg:flex gap-6 text-lg">
@@ -96,8 +96,25 @@
         
         <section class="relative h-[80vh] sm:h-screen">
             <div class="relative size-full">
-                <video class="size-full object-cover object-left md:object-[0px] brightness-50" src="static/video/hero-section-video.mp4" autoplay loop muted fetchpriority="high"></video>
-            </div>
+                <video 
+                class="size-full object-cover object-left md:object-[0px] brightness-50"
+                autoplay
+                loop
+                muted
+                playsinline
+                preload="metadata"
+                poster="static/images/poster%20video%20the%20golden%20patty.webp"
+                loading="lazy"
+                width="1920"
+                height="1080"
+            >
+                <source src="tuo-video.mp4" type="video/mp4">
+                <!-- Fallback per browser che non supportano video -->
+                <img src="static/images/poster%20video%20the%20golden%20patty.png" 
+                     alt="The Golden Patty" 
+                     class="w-full h-full object-cover">
+            </video>
+        </div>
 
             <div class="container z-20 absolute bottom-[10%] sm:bottom-[20%] left-1/2 sm:text-center transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center w-full px-4">
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl bg-clip-text bg-gradient-to-l from-primary to-accent font-quaternary text-transparent h-[130px] sm:h-[170px] md:h-[140px] sm:leading-14 lg:leading-16">Golden Quality. <br> Every Patty, <br class="md:hidden"> Every Time.</h1>
@@ -112,7 +129,7 @@
                               shadow-lg hover:shadow-xl hover:shadow-accent/30
                               focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent">
                         <span class="flex items-center gap-2">
-                            <span>Order Now</span>
+                            <span class="whitespace-nowrap">Order Now</span>
                             <i class="fa-solid fa-arrow-right text-xs"></i>
                         </span>
                     </a>
@@ -120,14 +137,14 @@
                     <a href="menu.html" 
                        role="button" 
                        aria-label="View our Menu" 
-                       class="relative inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-3.5 font-octonary text-sm md:text-base 
+                       class="relative inline-flex items-center justify-center px-3 py-2.5 sm:px-8 sm:py-3.5 font-octonary text-sm md:text-base 
                               bg-transparent text-primary border-2 border-primary rounded-xl 
                               transform transition-all duration-200 ease-in-out
                               hover:bg-primary/5 active:bg-primary/10 active:scale-95
                               shadow-md hover:shadow-lg
                               focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
                         <span class="flex items-center gap-2">
-                            <span>View our menu</span>
+                            <span class="whitespace-nowrap">View our menu</span>
                             <i class="fa-solid fa-utensils text-xs"></i>
                         </span>
                     </a>
@@ -667,8 +684,22 @@
                 </div>
             </div>
             
-            <div class="border-t border-black/20 mt-12 pt-6 text-center">
-                <p class="text-sm">&copy; 2025 The Golden Patty. All rights reserved.</p>
+            <div class="mt-12 pt-6 border-t-2">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                        <p class="text-sm">&copy; 2025 The Golden Patty. All rights reserved.</p>
+                        <!-- Developer Credit -->
+                        <div class="bg-black px-4 py-2 rounded-full border border-black/10 hover:bg-black/90 transition-colors">
+                            <a href="https://airadev-portfolio.netlify.app" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="text-sm font-medium text-white hover:underline flex items-center gap-1">
+                                Made with <i class="fa-solid fa-heart text-red-500 mx-1 translate-y-[1.5px]"></i> by Aira
+                                <i class="fas fa-arrow-up-right-from-square text-xs opacity-80"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>

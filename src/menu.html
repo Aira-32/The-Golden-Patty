@@ -42,10 +42,87 @@
         </div>
     </main>
 
-    <footer class="bg-secondary text-white py-8">
-        <div class="container mx-auto px-4">
-            <p class="text-center">&copy; 2025 The Golden Patty. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-bun text-black font-semibold py-12 px-4 mt-auto">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Contact Info -->
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-primary font-extralight mb-4">CONTACT US</h3>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="https://maps.app.goo.gl/example" target="_blank" rel="noopener noreferrer" class="hover:underline underline-offset-2 transition-colors">
+                            123 Flavor Street<br>Rome, 00100
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+39061234567" class="hover:underline underline-offset-2 transition-colors">
+                            +39 06 123 4567
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@goldenpatty.com" class="hover:underline underline-offset-2 transition-colors">
+                            info@goldenpatty.com
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Opening Hours -->
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-primary font-extralight mb-4">OPENING HOURS</h3>
+                    <div class="space-y-2">
+                        <div class="flex justify-between">
+                            <span>Monday - Friday:</span>
+                            <span>12:00 - 15:30</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Evening:</span>
+                            <span>19:00 - 00:00</span>
+                        </div>
+                        <div class="flex justify-between font-bold">
+                            <span>Saturday - Sunday:</span>
+                            <span>12:00 - 00:00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Social Media -->
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-primary font-extralight mb-4">FOLLOW US</h3>
+                    <div class="flex gap-6 text-2xl">
+                        <a href="#" class="hover:text-primary transition-colors" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="hover:text-primary transition-colors" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright & Credit -->
+            <div class="mt-12 pt-6 border-t-2">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                        <p class="text-sm">&copy; 2025 The Golden Patty. All rights reserved.</p>
+                        <!-- Developer Credit -->
+                        <div class="bg-black px-4 py-2 rounded-full border border-black/10 hover:bg-black/90 transition-colors">
+                            <a href="https://airadev-portfolio.netlify.app" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="text-sm font-medium text-white hover:underline flex items-center gap-1">
+                                Made with <i class="fa-solid fa-heart text-red-500 mx-1 translate-y-[1px]"></i> by Aira
+                                <i class="fas fa-arrow-up-right-from-square text-xs opacity-80"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
