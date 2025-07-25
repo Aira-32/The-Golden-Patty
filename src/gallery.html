@@ -6,6 +6,7 @@
     <meta name="description" content="Explore our delicious burgers and restaurant atmosphere through our photo gallery. See what makes The Golden Patty special.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="output.css">
+    <!-- Preload per la prima immagine -->
     <link rel="preload" as="image" href="static/images/welcome_section_img.webp">
     <title>The Golden Patty - Gallery</title>
 </head>
@@ -96,15 +97,18 @@
     <main>
         <section class="relative h-[80vh] flex items-center justify-center text-center">
             <div class="absolute inset-0 bg-black/60 z-0"></div>
-            <img 
-                src="static/images/welcome_section_img.webp" 
-                class="w-full h-full object-cover absolute inset-0 -z-10" 
-                alt="Delicious food selection"
-                loading="eager"
-                width="1920"
-                height="1080"
-                decoding="async"
-                onerror="this.onerror=null; this.src='static/images/welcome_section_img.jpeg'">
+            <picture>
+                <source srcset="static/images/welcome_section_img.webp" type="image/webp">
+                <img src="static/images/welcome_section_img.jpeg" 
+                     class="w-full h-full object-cover absolute inset-0 -z-10" 
+                     alt="Delicious food selection"
+                     loading="eager"
+                     width="1920"
+                     height="1080"
+                     decoding="async"
+                     fetchpriority="high"
+                     style="background-color: #f3f4f6">
+            </picture>
             <div class="relative z-10 p-4 text-center">
                 <h2 class="font-primary text-4xl md:text-6xl text-cheese mb-6 drop-shadow-lg">CULINARY DELIGHTS</h2>
                 <p class="font-octonary text-lg md:text-xl text-background max-w-2xl mx-auto leading-relaxed">Experience the perfect blend of flavors in every bite. Our passion for quality ingredients shines through in every dish we serve.</p>
@@ -120,7 +124,11 @@
                             <img class="w-full h-auto rounded-xl transform transition-all duration-500 ease-in-out hover:scale-110" 
                                  src="static/images/burger_section/burger_section_second_img.jpeg" 
                                  alt="Sesame burger with melted cheese"
-                                 loading="lazy">
+                                 loading="lazy"
+                                 width="800"
+                                 height="600"
+                                 decoding="async"
+                                 style="background-color: #f3f4f6">
                         </picture>
                     </div>
                     <div class="mb-4 break-inside-avoid overflow-hidden rounded-xl shadow-lg">
@@ -129,7 +137,11 @@
                             <img class="w-full h-auto rounded-xl transform transition-all duration-500 ease-in-out hover:scale-110" 
                                  src="static/images/gallery/pexels-dzeninalukac-1583884.jpg" 
                                  alt="Hot dog with sauces and sauerkraut"
-                                 loading="lazy">
+                                 loading="lazy"
+                                 width="800"
+                                 height="600"
+                                 decoding="async"
+                                 style="background-color: #f3f4f6">
                         </picture>
                     </div>
                     <div class="mb-4 break-inside-avoid overflow-hidden rounded-xl shadow-lg">
@@ -160,7 +172,11 @@
                             <img class="w-full h-auto rounded-xl transform transition-all duration-500 ease-in-out hover:scale-110" 
                                  src="static/images/gallery/pexels-laila-klinsmann-301011-943260.jpg" 
                                  alt="Chocolate milkshake with whipped cream and straw"
-                                 loading="lazy">
+                                 loading="lazy"
+                                 width="800"
+                                 height="600"
+                                 decoding="async"
+                                 style="background-color: #f3f4f6">
                         </picture>
                     </div>
                     <div class="mb-4 break-inside-avoid overflow-hidden rounded-xl shadow-lg">
@@ -169,7 +185,11 @@
                             <img class="w-full h-auto rounded-xl transform transition-all duration-500 ease-in-out hover:scale-110" 
                                  src="static/images/gallery/pexels-marilena-baltzaki-346260-15082377.jpg" 
                                  alt="Golden chicken nuggets with sweet and sour sauce"
-                                 loading="lazy">
+                                 loading="lazy"
+                                 width="800"
+                                 height="600"
+                                 decoding="async"
+                                 style="background-color: #f3f4f6">
                         </picture>
                     </div>
                     <div class="mb-4 break-inside-avoid overflow-hidden rounded-xl shadow-lg">
@@ -178,7 +198,11 @@
                             <img class="w-full h-auto rounded-xl transform transition-all duration-500 ease-in-out hover:scale-110" 
                                  src="static/images/burger_section/burger_section_third_img.jpeg" 
                                  alt="Delicious chocolate dessert with ice cream"
-                                 loading="lazy">
+                                 loading="lazy"
+                                 width="800"
+                                 height="600"
+                                 decoding="async"
+                                 style="background-color: #f3f4f6">
                         </picture>
                     </div>
                     <div class="mb-4 break-inside-avoid overflow-hidden rounded-xl shadow-lg">
@@ -187,7 +211,11 @@
                             <img class="w-full h-auto rounded-xl transform transition-all duration-500 ease-in-out hover:scale-110" 
                                  src="static/images/gallery/pexels-yelenaodintsova-10289300.jpg" 
                                  alt="Delicious chocolate dessert with ice cream"
-                                 loading="lazy">
+                                 loading="lazy"
+                                 width="800"
+                                 height="600"
+                                 decoding="async"
+                                 style="background-color: #f3f4f6">
                         </picture>
                     </div>
 
