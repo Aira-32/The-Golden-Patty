@@ -32,43 +32,105 @@
                 </li>
             </ul>
             
-            <div class="lg:hidden open-sidebar">
-                <i role="button" aria-label="Open sidebar" class="fa-solid fa-bars text-2xl cursor-pointer"></i>
+            <div role="button" aria-label="Open sidebar" class="lg:hidden open-sidebar">
+                <i class="fa-solid fa-bars text-2xl cursor-pointer"></i>
             </div>
             
         </div>
     </header>
     
-    <aside class="hidden fixed top-0 left-0 w-full h-full">
-        <ul>
-            <li>
-                <a href="about.html">About</a>
-            </li>
-            <li>
-                <a href="contact.html">Contact</a>
-            </li>
-            <li>
-                <a href="gallery.html">Gallery</a>
-            </li>
-            <li>
-                <a href="#">Menu</a>
-            </li>
-        </ul>
+    <aside class="hidden fixed inset-0 z-40 bg-black/80 backdrop-blur-sm transition-all duration-200 ease-in-out">
+        <div class="absolute top-6 right-6">
+            <button id="close-sidebar" class="text-white text-2xl hover:scale-110 active:scale-95 transition-transform">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <nav class="h-full flex items-center justify-center px-6">
+            <ul class="w-full max-w-xs space-y-6">
+                <li class="group overflow-hidden">
+                    <a href="about.html" class="flex items-center gap-3 text-lg text-white/90 hover:text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-200 active:scale-95 active:bg-white/20">
+                        <i class="fa-regular fa-user w-6 text-center"></i>
+                        <span>About</span>
+                        <i class="fa-solid fa-chevron-right ml-auto text-sm opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200"></i>
+                    </a>
+                </li>
+                <li class="group overflow-hidden">
+                    <a href="contact.html" class="flex items-center gap-3 text-lg text-white/90 hover:text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-200 active:scale-95 active:bg-white/20">
+                        <i class="fa-regular fa-envelope w-6 text-center"></i>
+                        <span>Contact</span>
+                        <i class="fa-solid fa-chevron-right ml-auto text-sm opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200"></i>
+                    </a>
+                </li>
+                <li class="group overflow-hidden">
+                    <a href="gallery.html" class="flex items-center gap-3 text-lg text-white/90 hover:text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-200 active:scale-95 active:bg-white/20">
+                        <i class="fa-regular fa-images w-6 text-center"></i>
+                        <span>Gallery</span>
+                        <i class="fa-solid fa-chevron-right ml-auto text-sm opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200"></i>
+                    </a>
+                </li>
+                <li class="group overflow-hidden">
+                    <a href="menu.html" class="flex items-center gap-3 text-lg text-white/90 hover:text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-200 active:scale-95 active:bg-white/20">
+                        <i class="fa-solid fa-burger w-6 text-center"></i>
+                        <span>Menu</span>
+                        <i class="fa-solid fa-chevron-right ml-auto text-sm opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200"></i>
+                    </a>
+                </li>
+                <li class="pt-8 mt-8 border-t border-white/10">
+                    <h4 class="text-center text-white text-lg mb-4">FOLLOW US</h4>
+                    <div class="flex justify-center gap-6 text-2xl">
+                        <a href="#" class="text-white hover:text-primary transition-colors relative group" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                            <span class="sr-only">Visit our Instagram profile</span>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary transition-colors relative group" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                            <span class="sr-only">Visit our Facebook page</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
     </aside>
 
     <main>
         
-        <section>
-            <div class="relative">
-                <video class="w-screen h-[80vh] sm:h-screen object-cover object-left md:object-[0px]" src="static/video/hero-section-video.mp4" autoplay loop muted fetchpriority="high"></video>
-                <div class="absolute top-0 left-0 w-full h-full bg-black/60"></div>
+        <section class="relative h-[80vh] sm:h-screen">
+            <div class="relative size-full">
+                <video class="size-full object-cover object-left md:object-[0px] brightness-50" src="static/video/hero-section-video.mp4" autoplay loop muted fetchpriority="high"></video>
             </div>
 
-            <div class="container z-20 absolute bottom-2/5 sm:top-1/2 left-1/2 sm:text-center transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center h-fit">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl bg-clip-text bg-gradient-to-l from-primary to-accent font-quaternary text-transparent h-[130px] sm:h-[150px]">Golden Quality. <br> Every Patty, <br class="md:hidden"> Every Time.</h1>
+            <div class="container z-20 absolute bottom-[10%] sm:bottom-[20%] left-1/2 sm:text-center transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center w-full px-4">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl bg-clip-text bg-gradient-to-l from-primary to-accent font-quaternary text-transparent h-[130px] sm:h-[170px] md:h-[140px] sm:leading-14 lg:leading-16">Golden Quality. <br> Every Patty, <br class="md:hidden"> Every Time.</h1>
                 <div class="flex justify-center items-center w-full gap-8 lg:w-1/3 mt-8">
-                    <a href="#" role="button" aria-label="Order now" class="inline-block px-4 py-2 sm:px-8 sm:py-3 font-octonary text-sm md:text-base bg-gradient-to-r from-accent to-primary text-background rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap">Order Now</a>
-                    <a href="#" role="button" aria-label="View our Menu" class="inline-block px-4 py-2 sm:px-8 sm:py-3 font-octonary text-sm md:text-base bg-transparent text-primary border border-primary rounded-xl hover:scale-105 transition-scale duration-300 whitespace-nowrap">View our menu</a>
+                    <a href="#" 
+                       role="button" 
+                       aria-label="Order now" 
+                       class="relative inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-3.5 font-octonary text-sm md:text-base 
+                              bg-gradient-to-r from-accent to-primary text-background rounded-xl 
+                              transform transition-all duration-200 ease-in-out 
+                              active:scale-95 active:brightness-90 
+                              shadow-lg hover:shadow-xl hover:shadow-accent/30
+                              focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent">
+                        <span class="flex items-center gap-2">
+                            <span>Order Now</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </span>
+                    </a>
+                    
+                    <a href="menu.html" 
+                       role="button" 
+                       aria-label="View our Menu" 
+                       class="relative inline-flex items-center justify-center px-6 py-3 sm:px-8 sm:py-3.5 font-octonary text-sm md:text-base 
+                              bg-transparent text-primary border-2 border-primary rounded-xl 
+                              transform transition-all duration-200 ease-in-out
+                              hover:bg-primary/5 active:bg-primary/10 active:scale-95
+                              shadow-md hover:shadow-lg
+                              focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                        <span class="flex items-center gap-2">
+                            <span>View our menu</span>
+                            <i class="fa-solid fa-utensils text-xs"></i>
+                        </span>
+                    </a>
                 </div>
             </div>
 

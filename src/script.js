@@ -57,3 +57,26 @@ window.loadMap = loadMap;
 document.addEventListener('DOMContentLoaded', function() {
     initMapConsent();
 });
+
+
+
+
+
+
+
+// code for the sidebar
+const allOpenSidebarBtn = document.querySelectorAll(".open-sidebar");
+const aside = document.querySelector('aside');
+allOpenSidebarBtn.forEach(button => {
+    button.addEventListener('click', () => {
+        aside.classList.remove('hidden');
+    })
+});
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'b' && e.ctrlKey) {
+        aside.classList.toggle('hidden');
+    }
+});
+
+document.getElementById('close-sidebar').addEventListener('click', () => aside.classList.add('hidden'));

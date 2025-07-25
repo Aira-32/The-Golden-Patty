@@ -10,7 +10,7 @@
 </head>
 <body class="bg-background text-secondary">
     
-    <header class="p-4 px-8 w-screen fixed z-20 bg-secondary/70 text-cheese font-quinary">
+    <header class="p-4 px-8 w-screen fixed z-30 bg-secondary/70 backdrop-blur-sm text-cheese font-quinary">
         <div class="w-full flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-2 text-2xl">
                 <i class="fa-solid fa-burger"></i>
@@ -32,28 +32,64 @@
                 </li>
             </ul>
             
-            <div class="lg:hidden open-sidebar">
-                <i role="button" aria-label="Open sidebar" class="fa-solid fa-bars text-2xl cursor-pointer"></i>
+            <div role="button" aria-label="Open sidebar" class="lg:hidden open-sidebar">
+                <i class="fa-solid fa-bars text-2xl cursor-pointer"></i>
             </div>
             
         </div>
     </header>
     
-    <aside class="hidden fixed top-0 left-0 w-full h-full">
-        <ul>
-            <li>
-                <a href="about.html">About</a>
-            </li>
-            <li>
-                <a href="contact.html">Contact</a>
-            </li>
-            <li>
-                <a href="gallery.html">Gallery</a>
-            </li>
-            <li>
-                <a href="#">Menu</a>
-            </li>
-        </ul>
+    <aside class="hidden fixed inset-0 z-40 bg-black/80 backdrop-blur-sm transition-all duration-200 ease-in-out">
+        <div class="absolute top-6 right-6">
+            <button class="text-white text-2xl hover:scale-110 active:scale-95 transition-transform" id="close-sidebar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <nav class="h-full flex items-center justify-center px-6">
+            <ul class="w-full max-w-xs space-y-6">
+                <li class="group overflow-hidden">
+                    <a href="about.html" class="flex items-center gap-3 text-lg text-white/90 hover:text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-200 active:scale-95 active:bg-white/20">
+                        <i class="fa-regular fa-user w-6 text-center"></i>
+                        <span>About</span>
+                        <i class="fa-solid fa-chevron-right ml-auto text-sm opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200"></i>
+                    </a>
+                </li>
+                <li class="group overflow-hidden">
+                    <a href="contact.html" class="flex items-center gap-3 text-lg text-white/90 hover:text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-200 active:scale-95 active:bg-white/20">
+                        <i class="fa-regular fa-envelope w-6 text-center"></i>
+                        <span>Contact</span>
+                        <i class="fa-solid fa-chevron-right ml-auto text-sm opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200"></i>
+                    </a>
+                </li>
+                <li class="group overflow-hidden">
+                    <a href="gallery.html" class="flex items-center gap-3 text-lg text-white/90 hover:text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-200 active:scale-95 active:bg-white/20">
+                        <i class="fa-regular fa-images w-6 text-center"></i>
+                        <span>Gallery</span>
+                        <i class="fa-solid fa-chevron-right ml-auto text-sm opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200"></i>
+                    </a>
+                </li>
+                <li class="group overflow-hidden">
+                    <a href="menu.html" class="flex items-center gap-3 text-lg text-white/90 hover:text-white px-4 py-3 rounded-lg hover:bg-white/10 transition-all duration-200 active:scale-95 active:bg-white/20">
+                        <i class="fa-solid fa-burger w-6 text-center"></i>
+                        <span>Menu</span>
+                        <i class="fa-solid fa-chevron-right ml-auto text-sm opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-200"></i>
+                    </a>
+                </li>
+                <li class="pt-8 mt-8 border-t border-white/10">
+                    <h4 class="text-center text-white text-lg mb-4">FOLLOW US</h4>
+                    <div class="flex justify-center gap-6 text-2xl">
+                        <a href="#" class="text-white hover:text-primary transition-colors relative group" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                            <span class="sr-only">Visit our Instagram profile</span>
+                        </a>
+                        <a href="#" class="text-white hover:text-primary transition-colors relative group" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-facebook" aria-hidden="true"></i>
+                            <span class="sr-only">Visit our Facebook page</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
     </aside>
 
 
