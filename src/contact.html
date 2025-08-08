@@ -104,7 +104,7 @@
                     <h2 class="text-2xl font-quaternary text-secondary mb-6">Write to Us</h2>
                     <form class="space-y-6" action="https://formsubmit.co/your@email.com" method="POST">
 
-                        <input type="hidden" name="_captcha">
+                        <input type="hidden" name="_captcha" value="false">
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
@@ -244,11 +244,11 @@
         <div class="container mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Contact Info -->
-                <div class="w-full">
+                <div class="space-y-4">
                     <h3 class="text-2xl font-primary font-extralight mb-4">CONTACT US</h3>
                     <div class="flex items-center gap-3">
                         <i class="fas fa-map-marker-alt"></i>
-                        <a href="https://maps.app.goo.gl/example" target="_blank" class="hover:underline underline-offset-2 transition-colors">
+                        <a href="https://maps.app.goo.gl/example" target="_blank" rel="noopener noreferrer" class="hover:underline underline-offset-2 transition-colors">
                             123 Flavor Street<br>Rome, 00100
                         </a>
                     </div>
@@ -272,12 +272,12 @@
                     <div id="map-container" class="relative bg-gray-100 rounded-lg overflow-hidden">
                         <!-- Cookie Consent Banner -->
                         <div id="map-consent" class="p-4 text-center">
-                            <p class="text-gray-700 mb-3">Per visualizzare la mappa, accetta i cookie di terze parti.</p>
+                            <p class="text-gray-700 mb-3">To visualize the map, accept the third part cookies.</p>
                             <button 
                                 onclick="loadMap()"
                                 class="bg-primary text-black px-6 py-2 rounded-lg hover:bg-primary-dark transition-colors font-medium"
                             >
-                                Accetta e mostra mappa
+                                Accept and show map
                             </button>
                         </div>
                         
@@ -292,62 +292,52 @@
                 <div class="w-full order-3 md:order-2">
                     <h3 class="text-2xl font-primary font-extralight mb-4">OPENING HOURS</h3>
                     <div class="space-y-4">
-                        <div class="bg-white/10 p-4 rounded-lg">
+                        <div class="border border-gray-800 p-4 rounded-lg">
                             <p class="font-medium text-lg mb-1">Lunedì - Venerdì</p>
                             <p class="text-gray-800">12:00 - 15:30</p>
                             <p class="text-gray-800">19:00 - 00:00</p>
                         </div>
-                        <div class="bg-white/10 p-4 rounded-lg">
+                        <div class="border border-gray-800 p-4 rounded-lg">
                             <p class="font-medium text-lg mb-1">Sabato - Domenica</p>
                             <p class="text-gray-800">12:00 - 00:00</p>
                         </div>
                     </div>
                     <div class="mt-8">
-                        <h4 class="font-quinary text-xl mb-3">FOLLOW US</h4>
-                        <div class="flex gap-6 text-2xl">
-                            <a href="#" class="hover:scale-110 transition-transform" aria-label="Instagram">
-                                <i class="fab fa-instagram"></i>
+                        <h4 class="font-quinary text-lg mb-2">FOLLOW US</h4>
+                        <div class="flex gap-4 text-2xl">
+                            <a href="#" class="transition-colors relative group" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-instagram" aria-hidden="true"></i>
                                 <span class="sr-only">Visit our Instagram profile</span>
                             </a>
-                            <a href="#" class="hover:scale-110 transition-transform" aria-label="Facebook">
-                                <i class="fab fa-facebook"></i>
+                            <a href="#" class="transition-colors relative group" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-facebook" aria-hidden="true"></i>
                                 <span class="sr-only">Visit our Facebook page</span>
                             </a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Footer Section -->
-                <div class="w-full col-span-1 md:col-span-3 order-last">
-                    <div class="mt-16 pt-8 border-t-2 border-black/20">
-                        <div class="container mx-auto px-4">
-                            <div class="flex flex-col md:flex-row justify-between items-center gap-4">
-                                <!-- Copyright -->
-                                <p class="text-sm font-medium text-black">
-                                    &copy; 2025 The Golden Patty. All rights reserved.
-                                </p>
-                                
-                                <!-- Developer Credit -->
-                                <div class="bg-black/80 px-4 py-2 rounded-full border border-black/10">
-                                    <p class="text-sm font-medium text-white flex items-center gap-1">
-                                        <span class="font-bold">Made with <i class="fa-solid fa-heart text-red-500 mx-1 translate-y-[1px]"></i> by</span>
-                                        <a href="https://airadev-portfolio.netlify.app" 
-                                           target="_blank" 
-                                           rel="noopener noreferrer"
-                                           class="font-bold hover:underline flex items-center gap-1">
-                                            Aira
-                                            <i class="fas fa-arrow-up-right-from-square text-xs"></i>
-                                        </a>
-                                    </p>
-                                </div>
-                            </div>
+            </div>
+            
+            <div class="mt-12 pt-6 border-t-2">
+                <div class="container mx-auto px-4">
+                    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                        <p class="text-sm">&copy; 2025 The Golden Patty. All rights reserved.</p>
+                        <!-- Developer Credit -->
+                        <div class="bg-black/80 px-4 py-2 rounded-full border border-black/10 hover:bg-black/90 transition-colors">
+                            <a href="https://airadev-portfolio.netlify.app" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="text-sm font-medium text-white hover:bg-black/50 flex items-center gap-1">
+                                Made with <i class="fa-solid fa-heart text-red-500 mx-1 translate-y-[1.5px]"></i> by Aira
+                                <i class="fas fa-arrow-up-right-from-square text-xs opacity-80"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>    
+        </div>
     </footer>
-
+    
     <script src="script.js"></script>
 </body>
 </html>

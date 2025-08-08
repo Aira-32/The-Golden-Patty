@@ -10,7 +10,7 @@
 </head>
 <body class="bg-background text-secondary">
     
-    <header class="p-4 px-8 w-screen fixed z-30 backdrop-brightness-50 backdrop-blur-lg bg-transparent text-cheese font-quinary">
+    <header class="p-4 px-8 w-screen fixed z-30 transition-all duration-300 text-cheese font-quinary">
         <div class="w-full flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-2 text-2xl">
                 <i class="fa-solid fa-burger"></i>
@@ -598,7 +598,7 @@
                 </div>
 
                 <div class="text-center mt-16">
-                    <a href="#" class="inline-flex items-center bg-primary text-secondary text-sm px-6 sm:px-8 py-4 rounded-full font-quaternary hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl">
+                    <a href="#" class="inline-flex items-center bg-primary text-secondary px-6 sm:px-8 py-4 rounded-full font-quaternary hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl">
                         Read More Reviews on Google
                         <i class="fas fa-arrow-right ml-3 group-hover:translate-x-1 transition-transform"></i>
                     </a>
@@ -639,12 +639,12 @@
                     <div id="map-container" class="relative bg-gray-100 rounded-lg overflow-hidden">
                         <!-- Cookie Consent Banner -->
                         <div id="map-consent" class="p-4 text-center">
-                            <p class="text-gray-700 mb-3">Per visualizzare la mappa, accetta i cookie di terze parti.</p>
+                            <p class="text-gray-700 mb-3">To visualize the map, accept the third part cookies.</p>
                             <button 
                                 onclick="loadMap()"
                                 class="bg-primary text-black px-6 py-2 rounded-lg hover:bg-primary-dark transition-colors font-medium"
                             >
-                                Accetta e mostra mappa
+                                Accept and show map
                             </button>
                         </div>
                         
@@ -659,12 +659,12 @@
                 <div class="w-full order-3 md:order-2">
                     <h3 class="text-2xl font-primary font-extralight mb-4">OPENING HOURS</h3>
                     <div class="space-y-4">
-                        <div class="bg-white/10 p-4 rounded-lg">
+                        <div class="border border-gray-800 p-4 rounded-lg">
                             <p class="font-medium text-lg mb-1">Lunedì - Venerdì</p>
                             <p class="text-gray-800">12:00 - 15:30</p>
                             <p class="text-gray-800">19:00 - 00:00</p>
                         </div>
-                        <div class="bg-white/10 p-4 rounded-lg">
+                        <div class="border border-gray-800 p-4 rounded-lg">
                             <p class="font-medium text-lg mb-1">Sabato - Domenica</p>
                             <p class="text-gray-800">12:00 - 00:00</p>
                         </div>
@@ -672,11 +672,11 @@
                     <div class="mt-8">
                         <h4 class="font-quinary text-lg mb-2">FOLLOW US</h4>
                         <div class="flex gap-4 text-2xl">
-                            <a href="#" class="hover:text-primary transition-colors relative group" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                            <a href="#" class="transition-colors relative group" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
                                 <i class="fab fa-instagram" aria-hidden="true"></i>
                                 <span class="sr-only">Visit our Instagram profile</span>
                             </a>
-                            <a href="#" class="hover:text-primary transition-colors relative group" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                            <a href="#" class="transition-colors relative group" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
                                 <i class="fab fa-facebook" aria-hidden="true"></i>
                                 <span class="sr-only">Visit our Facebook page</span>
                             </a>
@@ -690,11 +690,11 @@
                     <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p class="text-sm">&copy; 2025 The Golden Patty. All rights reserved.</p>
                         <!-- Developer Credit -->
-                        <div class="bg-black px-4 py-2 rounded-full border border-black/10 hover:bg-black/90 transition-colors">
+                        <div class="bg-black/80 px-4 py-2 rounded-full border border-black/10 hover:bg-black/90 transition-colors">
                             <a href="https://airadev-portfolio.netlify.app" 
                                target="_blank" 
                                rel="noopener noreferrer"
-                               class="text-sm font-medium text-white hover:underline flex items-center gap-1">
+                               class="text-sm font-medium text-white hover:bg-black/50 flex items-center gap-1">
                                 Made with <i class="fa-solid fa-heart text-red-500 mx-1 translate-y-[1.5px]"></i> by Aira
                                 <i class="fas fa-arrow-up-right-from-square text-xs opacity-80"></i>
                             </a>
@@ -706,5 +706,26 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Scroll effect for the header
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('header');
+            
+            // Function to handle scroll
+            function handleScroll() {
+                if (window.scrollY > 50) {
+                    header.classList.add('backdrop-blur-lg', 'backdrop-brightness-50');
+                } else {
+                    header.classList.remove('backdrop-blur-lg', 'backdrop-brightness-50');
+                }
+            }
+            
+            // Add scroll event listener
+            window.addEventListener('scroll', handleScroll);
+            
+            // Run once on startup to set initial state
+            handleScroll();
+        });
+    </script>
 </body>
 </html>

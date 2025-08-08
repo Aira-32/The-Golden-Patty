@@ -52,17 +52,10 @@ function loadMap() {
 
 // Esponi la funzione loadMap all'oggetto window
 window.loadMap = loadMap;
-
 // Inizializza la mappa quando il DOM è caricato
 document.addEventListener('DOMContentLoaded', function() {
     initMapConsent();
 });
-
-
-
-
-
-
 
 // code for the sidebar
 const allOpenSidebarBtn = document.querySelectorAll(".open-sidebar");
